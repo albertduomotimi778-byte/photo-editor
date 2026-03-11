@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Professional Photo Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Lumina<span>Studio</span></div>
+            <div class="actions">
+                <button id="resetBtn" class="secondary-btn">Reset</button>
+                <button onclick="document.getElementById('upload').click()" class="primary-btn">Import Image</button>
+                <input type="file" id="upload" accept="image/png, image/jpeg, image/webp" hidden>
+            </div>
+        </header>
+        
+        <main>
+            <div class="canvas-area" id="dropZone">
+                <div id="canvasWrapper">
+                    <canvas id="editorCanvas"></canvas>
+                </div>
+                <div id="placeholderText">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+                    <p>Select an image to begin editing</p>
+                </div>
+            </div>
+            
+            <aside class="sidebar">
+                <h3>Visual Adjustments</h3>
+                <div class="control-group">
+                    <label>Brightness <span class="val" id="b-val">100</span>%</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100" data-suffix="%">
+                </div>
+                <div class="control-group">
+                    <label>Contrast <span class="val" id="c-val">100</span>%</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100" data-suffix="%">
+                </div>
+                <div class="control-group">
+                    <label>Grayscale <span class="val" id="g-val">0</span>%</label>
+                    <input type="range" id="grayscale" min="0" max="100" value="0" data-suffix="%">
+                </div>
+                <div class="control-group">
+                    <label>Blur <span class="val" id="blur-val">0</span>px</label>
+                    <input type="range" id="blur" min="0" max="20" value="0" data-suffix="px">
+                </div>
+                <button id="downloadBtn" class="download-btn">Export Master</button>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+  <script src="script.js"></script>
+</body>
+</html>
